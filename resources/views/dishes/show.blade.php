@@ -7,7 +7,7 @@
     <p><strong>Precio:</strong>{{$dish->price}}</p>
 </div>
 <a href="{{route('dishes.edit', $dish)}}">Edit</a><br><br>
-<form action="{{route('dishes.destroy',$dish)}}">
+<form action="{{route('dishes.destroy',$dish)}}" method="POST">
     @csrf
     @method('DELETE')
 

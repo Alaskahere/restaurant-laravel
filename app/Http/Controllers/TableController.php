@@ -10,7 +10,7 @@ class TableController extends Controller
     public function index()
     {
         $tables = Table::all();
-        return view('tables.index',compact($tables));
+        return view('tables.index',compact('tables'));
     }
 
     public function create()
