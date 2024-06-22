@@ -6,6 +6,7 @@ use App\Models\Dish;
 use App\Models\Order;
 use App\Models\Table;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class OrderController extends Controller
 {
@@ -82,6 +83,7 @@ class OrderController extends Controller
     public function completar(Order $order)
     {
         $order->update(['state' => 'completa']);
+
         return redirect()->route('orders.index');
     }
 

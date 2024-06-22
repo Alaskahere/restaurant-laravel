@@ -23,10 +23,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('categories', CategoryController::class);
-Route::resource('tebles', TableController::class);
 Route::resource('orders', OrderController::class);
 Route::post('orders/{order}/completar', [OrderController::class, 'completar'])->name('orders.completar');
 Route::resource('dishes', DishController::class);
-
+Route::resource('tables', TableController::class);
 
 require __DIR__.'/auth.php';
+
+
